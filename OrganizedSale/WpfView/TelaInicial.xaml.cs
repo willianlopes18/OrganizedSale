@@ -32,8 +32,8 @@ namespace WpfView
                     txtCadastrarUsuario.Visibility  = Visibility.Collapsed;
 
                     //Esconde o menu de cadastrar produto
-                    btnCadastrarProduto.Visibility  = Visibility.Collapsed;
-                    txtCadastrarProduto.Visibility   = Visibility.Collapsed;
+                    //btnCadastrarProduto.Visibility  = Visibility.Collapsed;
+                    //txtCadastrarProduto.Visibility   = Visibility.Collapsed;
 
                     break;
             }

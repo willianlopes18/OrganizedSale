@@ -36,8 +36,7 @@ namespace Controllers
             }
             else {
                 return false;
-            }            
-            
+            }                        
         }
 
         public void Excluir(int id)
