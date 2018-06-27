@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfView.TelaInicial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfView"
+        mc:Ignorable="d"
+        Title="TelaInicial" Height="auto" Width="auto">
+
+    <Grid>
+        <Label x:Name="txtBemVindo" Content="Label" HorizontalAlignment="Left" Margin="12,15,0,0" VerticalAlignment="Top" Width="542" Initialized="BemVindo" FontSize="20"/>
+        <Label Content="Cadastrar&#xD;&#xA;Usuário" TextBlock.TextAlignment="Center" Margin="27,129.893,649,326.44" ScrollViewer.VerticalScrollBarVisibility="Disabled" UseLayoutRounding="False" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="14"/>
+        <Image Margin="27,70,649,351" Source="if_InterfaceExpendet-10_592607.png" Stretch="Fill"/>
+        <Image Margin="150,86,556,364" Source="605509-128.png" Stretch="Fill"/>
+        <Label Content="Cadastrar&#xA;Produto" TextBlock.TextAlignment="Center" Margin="135.32,129.893,540.68,326.44" ScrollViewer.VerticalScrollBarVisibility="Disabled" UseLayoutRounding="False" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="14"/>
+    </Grid>
+</Window>

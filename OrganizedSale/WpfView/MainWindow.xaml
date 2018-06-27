@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfView"
+        mc:Ignorable="d"
+        Title="Acesso ao Sistema" MinHeight="520" MinWidth="800" MaxWidth="800" MaxHeight="520">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="64*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="329*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Acesso ao Sistema" Margin="51,37,187,0" VerticalAlignment="Top" Width="420" FontSize="48" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="70,134,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Padding="0,5,5,5" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="txtLoginCPF" HorizontalAlignment="Left" Height="38" Margin="70,16.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="20" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Label Content="Senha" HorizontalAlignment="Left" Margin="70,75.5,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Padding="0,5,5,5" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <PasswordBox x:Name="txtSenha" HorizontalAlignment="Left" Margin="70,122.5,0,0" VerticalAlignment="Top" Height="38" Width="312" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Image Margin="364,134,28,19" Source="if_icon-118-lock-rounded_314696.png" Stretch="Fill" Grid.Column="1" MaxWidth="266" MaxHeight="266" MinWidth="266" MinHeight="266" Grid.RowSpan="2"/>
+        <Button Content="Entrar" HorizontalAlignment="Left" Margin="2,186.5,0,19" Width="176" Height="50" Background="#FF6CFD72" FontSize="24" FontWeight="Bold" Click="btnLogarSistema" Grid.Column="1" Grid.Row="1"/>
+    </Grid>
+</Window>

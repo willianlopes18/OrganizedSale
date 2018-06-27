@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfView.CadastroUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfView"
+        mc:Ignorable="d"
+        Title="Cadastro de Usuário" Height="501.064" Width="800">
+    <Grid HorizontalAlignment="Left" Width="790" RenderTransformOrigin="0.604,0.457">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="50" Margin="7,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="658" FontSize="22" Padding="3,8,0,0" Grid.Column="1"/>
+        <Label Content="Nome do colaborador" HorizontalAlignment="Left" Margin="7,28,0,0" VerticalAlignment="Top" Height="57" Width="299" FontSize="24" Padding="2,11,5,5" Grid.Column="1"/>
+        <TextBox x:Name="txtCPF" HorizontalAlignment="Left" Height="50" Margin="7,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" FontSize="22" Padding="3,8,0,0" Grid.Column="1"/>
+        <Label Content="CPF" HorizontalAlignment="Left" Margin="7,135,0,0" VerticalAlignment="Top" Height="57" Width="238" FontSize="24" Padding="2,11,5,5" Grid.Column="1"/>
+        <Label Content="Senha" HorizontalAlignment="Left" Margin="7,247,0,0" VerticalAlignment="Top" Height="57" Width="238" FontSize="24" Padding="2,11,5,5" Grid.Column="1"/>
+        <DatePicker x:Name="txtDataNascimento" HorizontalAlignment="Left" Margin="298,192,0,0" VerticalAlignment="Top" Height="50" Width="269" FontSize="24" Grid.Column="1"/>
+        <Label Content="Data de Nascimento" HorizontalAlignment="Left" Margin="298,135,0,0" VerticalAlignment="Top" Height="57" Width="269" FontSize="24" Padding="2,11,5,5" Grid.Column="1"/>
+        <Button x:Name="btnCadastrarUsuario" Content="Cadastrar" HorizontalAlignment="Left" Height="58" Margin="73,383,0,0" VerticalAlignment="Top" Width="233" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" Background="#FF2BE680" Click="BtnCadastrarUsuario" Grid.Column="1"/>
+        <Button x:Name="btnCancelarCadastroUsuario" Content="Cancelar" HorizontalAlignment="Left" Height="58" Margin="359,383,0,0" VerticalAlignment="Top" Width="233" Click="BtnCancelarCadastroUsuario" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center" Background="#FFFF4E4E" Grid.Column="1"/>
+        <PasswordBox x:Name="txtSenha" HorizontalAlignment="Left" Margin="7,309,0,0" VerticalAlignment="Top" Height="49" Width="658" Grid.Column="1"/>
+
+    </Grid>
+</Window>
