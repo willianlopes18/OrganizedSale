@@ -27,7 +27,8 @@ namespace Controllers.DAL
         public int Create(Usuario entity)
         {
             entity.Ativo = true;
-            contexto.Usuarios.Add(entity);
+            entity.PermissaoID = 3;
+            contexto.Usuarios.Add(entity);            
             contexto.SaveChanges();
 
             return entity.UsuarioID;

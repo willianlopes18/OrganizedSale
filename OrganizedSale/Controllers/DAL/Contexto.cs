@@ -19,6 +19,8 @@ namespace Controllers.DAL
 
         }
 
+        public DbSet<Permissao> Permissoes { get; set; }
+
         public DbSet<Usuario> Usuarios { get; set; }
 
         public DbSet<Categoria> Categoria { get; set; }

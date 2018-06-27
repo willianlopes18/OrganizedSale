@@ -9,7 +9,7 @@ namespace Modelos
         public int UsuarioID { get; set; }
 
         [Required]
-        [StringLength(30)]
+        [StringLength(60)]
         public string Nome { get; set; }
 
         [Required, StringLength(11)]
@@ -20,6 +20,11 @@ namespace Modelos
 
         [Required]
         public DateTime DataNascimento { get; set; }
+
+        [Required]
+        public int PermissaoID { get; set; }
+
+        public virtual Permissao _Permissao { get; set; }
 
         public bool Ativo { get; set; }
     }
