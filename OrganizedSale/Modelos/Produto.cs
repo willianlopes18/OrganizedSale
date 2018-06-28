@@ -14,6 +14,9 @@ namespace Modelos
 
         [Required,StringLength(50)]
         public string Marca { get; set; }
+        
+        [Required]
+        public string Modelo { get; set; }
 
         [Required]
         public string ValorCompra { get; set; }

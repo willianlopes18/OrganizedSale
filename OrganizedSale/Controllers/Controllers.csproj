@@ -49,10 +49,11 @@
   <ItemGroup>
     <Compile Include="Base\IBaseController.cs" />
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="DAL\ProdutosDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
-    <Compile Include="Migrations\201806260207448_InitialCreate.cs" />
-    <Compile Include="Migrations\201806260207448_InitialCreate.Designer.cs">
-      <DependentUpon>201806260207448_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201806281818552_NovoBanco.cs" />
+    <Compile Include="Migrations\201806281818552_NovoBanco.Designer.cs">
+      <DependentUpon>201806281818552_NovoBanco.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProdutosController.cs" />
@@ -71,8 +72,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806260207448_InitialCreate.resx">
-      <DependentUpon>201806260207448_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806281818552_NovoBanco.resx">
+      <DependentUpon>201806281818552_NovoBanco.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

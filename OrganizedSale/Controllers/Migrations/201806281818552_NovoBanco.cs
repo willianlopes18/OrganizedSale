@@ -3,7 +3,7 @@ namespace Controllers.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class NovoBanco : DbMigration
     {
         public override void Up()
         {
@@ -13,23 +13,47 @@ namespace Controllers.Migrations
                     {
                         CategoriaID = c.Int(nullable: false, identity: true),
                         Tipo = c.String(),
-                        Descricao = c.String(),
                     })
                 .PrimaryKey(t => t.CategoriaID);
+            
+            CreateTable(
+                "dbo.Permissaos",
+                c => new
+                    {
+                        PermissaoID = c.Int(nullable: false, identity: true),
+                        TipoPermissao = c.String(nullable: false),
+                    })
+                .PrimaryKey(t => t.PermissaoID);
+            
+            CreateTable(
+                "dbo.Produtoes",
+                c => new
+                    {
+                        ProdutoID = c.Int(nullable: false, identity: true),
+                        CategoriaID = c.Int(nullable: false),
+                        Marca = c.String(nullable: false, maxLength: 50),
+                        Modelo = c.String(nullable: false),
+                        ValorCompra = c.String(nullable: false),
+                    })
+                .PrimaryKey(t => t.ProdutoID)
+                .ForeignKey("dbo.Categorias", t => t.CategoriaID, cascadeDelete: true)
+                .Index(t => t.CategoriaID);
             
             CreateTable(
                 "dbo.Usuarios",
                 c => new
                     {
                         UsuarioID = c.Int(nullable: false, identity: true),
-                        Nome = c.String(nullable: false, maxLength: 30),
+                        Nome = c.String(nullable: false, maxLength: 60),
                         Cpf = c.String(nullable: false, maxLength: 11),
                         Senha = c.String(nullable: false, maxLength: 20),
                         DataNascimento = c.DateTime(nullable: false),
-                        Permissao = c.Int(nullable: false),
+                        PermissaoID = c.Int(nullable: false),
                         Ativo = c.Boolean(nullable: false),
                     })
-                .PrimaryKey(t => t.UsuarioID);
+                .PrimaryKey(t => t.UsuarioID)
+                .ForeignKey("dbo.Permissaos", t => t.PermissaoID, cascadeDelete: true)
+                .Index(t => t.PermissaoID);
             
             CreateTable(
                 "dbo.Vendas",
@@ -47,32 +71,22 @@ namespace Controllers.Migrations
                 .Index(t => t.ProdutoID)
                 .Index(t => t._Usuario_UsuarioID);
             
-            CreateTable(
-                "dbo.Produtoes",
-                c => new
-                    {
-                        ProdutoID = c.Int(nullable: false, identity: true),
-                        CategoriaID = c.Int(nullable: false),
-                        Marca = c.String(nullable: false, maxLength: 50),
-                        ValorCompra = c.String(nullable: false),
-                    })
-                .PrimaryKey(t => t.ProdutoID)
-                .ForeignKey("dbo.Categorias", t => t.CategoriaID, cascadeDelete: true)
-                .Index(t => t.CategoriaID);
-            
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.Vendas", "_Usuario_UsuarioID", "dbo.Usuarios");
             DropForeignKey("dbo.Vendas", "ProdutoID", "dbo.Produtoes");
+            DropForeignKey("dbo.Usuarios", "PermissaoID", "dbo.Permissaos");
             DropForeignKey("dbo.Produtoes", "CategoriaID", "dbo.Categorias");
-            DropIndex("dbo.Produtoes", new[] { "CategoriaID" });
             DropIndex("dbo.Vendas", new[] { "_Usuario_UsuarioID" });
             DropIndex("dbo.Vendas", new[] { "ProdutoID" });
-            DropTable("dbo.Produtoes");
+            DropIndex("dbo.Usuarios", new[] { "PermissaoID" });
+            DropIndex("dbo.Produtoes", new[] { "CategoriaID" });
             DropTable("dbo.Vendas");
             DropTable("dbo.Usuarios");
+            DropTable("dbo.Produtoes");
+            DropTable("dbo.Permissaos");
             DropTable("dbo.Categorias");
         }
     }

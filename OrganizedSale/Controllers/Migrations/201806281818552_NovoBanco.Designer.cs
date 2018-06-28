@@ -7,13 +7,13 @@ namespace Controllers.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class NovoBanco : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NovoBanco));
         
         string IMigrationMetadata.Id
         {
-            get { return "201806260207448_InitialCreate"; }
+            get { return "201806281818552_NovoBanco"; }
         }
         
         string IMigrationMetadata.Source
