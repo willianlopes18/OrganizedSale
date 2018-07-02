@@ -49,6 +49,7 @@ namespace WpfView
             CadastroUsuario cadastroUsuario = new CadastroUsuario();
             cadastroUsuario.ShowDialog();
         }
+        
 
         private void btnSairSistema(object sender, RoutedEventArgs e)
         {
@@ -56,6 +57,12 @@ namespace WpfView
             MainWindow LoginSistema = new MainWindow();
             this.Close();
             LoginSistema.ShowDialog();            
+        }
+
+        private void btnCadastrarProdutoE(object sender, MouseButtonEventArgs e)
+        {
+            CadastroProduto cadastroProduto = new CadastroProduto();
+            cadastroProduto.ShowDialog();
         }
     }
 }

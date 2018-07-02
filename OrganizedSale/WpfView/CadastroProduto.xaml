@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="CadastroProduto" Height="450" Width="800">
     <Grid>
-        
+        <ComboBox x:Name="cbCategoria" HorizontalAlignment="Left" Margin="114,29,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Produto" HorizontalAlignment="Left" Margin="24,25,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label Content="Marca" HorizontalAlignment="Left" Margin="24,56,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label Content="Modelo" HorizontalAlignment="Left" Margin="24,82,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label Content="Valor" HorizontalAlignment="Left" Margin="24,110,0,0" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:Name="txtMarca" HorizontalAlignment="Left" Height="23" Margin="114,59,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtModelo" HorizontalAlignment="Left" Height="23" Margin="114,89,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtValor" HorizontalAlignment="Left" Height="23" Margin="114,119,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="376,272,0,0" VerticalAlignment="Top" Width="74" Click="btnCadatraProdutoEntrada"/>
+
     </Grid>
 </Window>

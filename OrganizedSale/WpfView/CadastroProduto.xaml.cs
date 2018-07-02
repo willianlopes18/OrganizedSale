@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Modelos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,38 @@ namespace WpfView
         public CadastroProduto()
         {
             InitializeComponent();
+
+            ProdutosController controller = new ProdutosController();
+
+            for (int i = 0; i < controller.ListarCategorias().Count; i++)
+            {
+                cbCategoria.Items.Add(controller.ListarCategorias()[i]);   
+            }
+        }
+
+        private void btnCadatraProdutoEntrada(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Produto produto = new Produto();
+
+                produto.CategoriaID = cbCategoria.SelectedIndex + 1;
+                produto.Marca = txtMarca.Text;
+                produto.Modelo = txtModelo.Text;
+                produto.ValorCompra = txtValor.Text;
+
+                ProdutosController entradaProduto = new ProdutosController();
+                entradaProduto.Adicionar(produto);
+
+                MessageBox.Show("Produto cadastrado com sucesso");
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar o produto(" + ex.Message + ")");
+                throw;
+            }
         }
     }
 }

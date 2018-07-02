@@ -1,14 +1,17 @@
 ﻿using System.Collections.Generic;
 using Controllers.Base;
+using Controllers.DAL;
 using Modelos;
 
 namespace Controllers
 {
-    class ProdutosController : IBaseController<Produto>
+    public class ProdutosController : IBaseController<Produto>
     {
+        private ProdutosDAL produtosDAL = new ProdutosDAL();
+
         public void Adicionar(Produto entity)
         {
-            throw new System.NotImplementedException();
+            produtosDAL.Create(entity);
         }
 
         public Produto BuscarPorID(int id)
@@ -34,6 +37,11 @@ namespace Controllers
         public IList<Produto> ListarTodos()
         {
             throw new System.NotImplementedException();
+        }
+
+        public IList<Categoria> ListarCategorias()
+        {
+            return produtosDAL.ListCategorias();
         }
     }
 }

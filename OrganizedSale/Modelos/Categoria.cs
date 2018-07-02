@@ -7,7 +7,9 @@ namespace Modelos
         [Key]
         public int CategoriaID { get; set; }
 
-        public string Tipo { get; set; }
 
+        public string Tipo { get; set; }
+        
+        public override string ToString() { return Tipo; }
     }
 }
