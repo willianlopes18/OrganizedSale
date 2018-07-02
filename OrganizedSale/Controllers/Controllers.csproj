@@ -55,6 +55,10 @@
     <Compile Include="Migrations\201806281818552_NovoBanco.Designer.cs">
       <DependentUpon>201806281818552_NovoBanco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807020100477_CampoQuantidadeProduto.cs" />
+    <Compile Include="Migrations\201807020100477_CampoQuantidadeProduto.Designer.cs">
+      <DependentUpon>201807020100477_CampoQuantidadeProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProdutosController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806281818552_NovoBanco.resx">
       <DependentUpon>201806281818552_NovoBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807020100477_CampoQuantidadeProduto.resx">
+      <DependentUpon>201807020100477_CampoQuantidadeProduto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -64,5 +64,12 @@ namespace WpfView
             CadastroProduto cadastroProduto = new CadastroProduto();
             cadastroProduto.ShowDialog();
         }
+
+        private void exibeProdutos(object sender, RoutedEventArgs e)
+        {
+            Vendas cadastroProduto = new Vendas();
+
+            cadastroProduto.ShowDialog();
+        }
     }
 }

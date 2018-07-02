@@ -20,5 +20,10 @@ namespace Controllers.DAL
 
             return entity.ProdutoID;
         }
+
+        public IList<Produto> ListProdutos()
+        {
+            return contexto.Produtos.ToList();
+        }
     }
 }

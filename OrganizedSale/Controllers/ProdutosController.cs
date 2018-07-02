@@ -36,7 +36,7 @@ namespace Controllers
 
         public IList<Produto> ListarTodos()
         {
-            throw new System.NotImplementedException();
+            return produtosDAL.ListProdutos();
         }
 
         public IList<Categoria> ListarCategorias()

@@ -14,8 +14,10 @@
         <Label Content="Valor" HorizontalAlignment="Left" Margin="24,110,0,0" VerticalAlignment="Top" Width="85"/>
         <TextBox x:Name="txtMarca" HorizontalAlignment="Left" Height="23" Margin="114,59,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtModelo" HorizontalAlignment="Left" Height="23" Margin="114,89,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtValor" HorizontalAlignment="Left" Height="23" Margin="114,119,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtValor" HorizontalAlignment="Left" Height="23" Margin="114,121,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="376,272,0,0" VerticalAlignment="Top" Width="74" Click="btnCadatraProdutoEntrada"/>
+        <Label Content="Quantidade" HorizontalAlignment="Left" Margin="24,140,0,0" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:Name="txtQuantidadeProduto" HorizontalAlignment="Left" Height="23" Margin="114,147,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

@@ -43,6 +43,7 @@ namespace WpfView
                 produto.Marca = txtMarca.Text;
                 produto.Modelo = txtModelo.Text;
                 produto.ValorCompra = txtValor.Text;
+                produto.Quantidade = Convert.ToInt32(txtQuantidadeProduto.Text);
 
                 ProdutosController entradaProduto = new ProdutosController();
                 entradaProduto.Adicionar(produto);

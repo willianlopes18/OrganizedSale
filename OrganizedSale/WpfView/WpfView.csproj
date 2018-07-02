@@ -90,6 +90,9 @@
     <Compile Include="TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vendas.xaml.cs">
+      <DependentUpon>Vendas.xaml</DependentUpon>
+    </Compile>
     <Page Include="CadastroCategoria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,6 +118,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TelaInicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vendas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
