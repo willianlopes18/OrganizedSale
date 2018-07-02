@@ -22,6 +22,9 @@ namespace Modelos
         public string ValorCompra { get; set; }
 
         [Required]
+        public string ValorVenda { get; set; }
+
+        [Required]
         public int Quantidade { get; set; }
     }
 }

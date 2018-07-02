@@ -7,7 +7,12 @@
         mc:Ignorable="d"
         Title="Vendas" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="tabelaProdutos" HorizontalAlignment="Left" Height="100" Margin="160,62,0,0" VerticalAlignment="Top" Width="100"/>
-
+        <Label Content="Código do produto" HorizontalAlignment="Left" Margin="23,26,0,0" VerticalAlignment="Top"/>
+        <Label Content="Produto" HorizontalAlignment="Left" Margin="23,57,0,0" VerticalAlignment="Top"/>
+        <Label Content="Valor" HorizontalAlignment="Left" Margin="23,88,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="inputCodigoProduto" HorizontalAlignment="Left" Height="23" Margin="140,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="inputCodigo"/>
+        <Label x:Name="txtVendasProduto" Content="Label" HorizontalAlignment="Left" Margin="140,57,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="txtVendasValor" Content="Label" HorizontalAlignment="Left" Margin="140,88,0,0" VerticalAlignment="Top"/>
+        <Button Content="Concluir" HorizontalAlignment="Left" Margin="23,138,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

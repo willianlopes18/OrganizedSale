@@ -55,7 +55,7 @@ namespace WpfView
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao salvar o produto(" + ex.Message + ")");
-                throw;
+                
             }
         }
     }

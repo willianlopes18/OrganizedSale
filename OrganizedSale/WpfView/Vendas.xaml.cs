@@ -24,11 +24,34 @@ namespace WpfView
         public Vendas()
         {
             InitializeComponent();
+        }
 
+        private void inputCodigo(object sender, TextChangedEventArgs e)
+        {
             ProdutosController produtos = new ProdutosController();
-            IList<Produto> produtoLista = produtos.ListarTodos();
 
-            tabelaProdutos.ItemsSource = produtoLista;
+            if (inputCodigoProduto.Text != "")
+            {
+                var codigo = Convert.ToInt32(inputCodigoProduto.Text);
+
+                var produto = produtos.BuscarPorID(codigo);
+
+                if (produto != null)
+                {
+                    txtVendasProduto.Content = produto.Modelo;
+                    txtVendasValor.Content = produto.
+                }
+                else
+                {
+                    txtVendasProduto.Content = "";
+                }
+            }
+            else
+            {
+                txtVendasProduto.Content = "";
+            }
+            
+
         }
     }
 }

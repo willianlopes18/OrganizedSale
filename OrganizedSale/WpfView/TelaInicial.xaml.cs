@@ -67,9 +67,9 @@ namespace WpfView
 
         private void exibeProdutos(object sender, RoutedEventArgs e)
         {
-            Vendas cadastroProduto = new Vendas();
+            Vendas venda = new Vendas();
 
-            cadastroProduto.ShowDialog();
+            venda.ShowDialog();
         }
     }
 }

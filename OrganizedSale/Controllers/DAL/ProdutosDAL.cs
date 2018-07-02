@@ -13,6 +13,11 @@ namespace Controllers.DAL
             return contexto.Categorias.ToList();
         }
 
+        public Produto search(int id)
+        {
+            return contexto.Produtos.Find(id);
+        }
+
         public int Create(Produto entity)
         {
             contexto.Produtos.Add(entity);

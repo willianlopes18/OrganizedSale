@@ -16,7 +16,7 @@ namespace Controllers
 
         public Produto BuscarPorID(int id)
         {
-            throw new System.NotImplementedException();
+            return produtosDAL.search(id);
         }
 
         public void Editar(Produto entity)
