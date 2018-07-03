@@ -19,10 +19,10 @@ namespace Modelos
         public string Modelo { get; set; }
 
         [Required]
-        public string ValorCompra { get; set; }
+        public double ValorCompra { get; set; }
 
         [Required]
-        public string ValorVenda { get; set; }
+        public int Lucro { get; set; }
 
         [Required]
         public int Quantidade { get; set; }

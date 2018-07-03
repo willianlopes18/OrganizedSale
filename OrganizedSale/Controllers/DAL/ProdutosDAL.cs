@@ -13,6 +13,15 @@ namespace Controllers.DAL
             return contexto.Categorias.ToList();
         }
 
+        public int edit(Produto entity)
+        {
+            contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
+
+            return entity.ProdutoID;
+            
+        }
+
         public Produto search(int id)
         {
             return contexto.Produtos.Find(id);

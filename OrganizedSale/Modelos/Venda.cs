@@ -8,10 +8,12 @@
 
         public virtual Produto _Produto { get; set; }
 
-        public float ValorVenda { get; set; }
+        public double ValorVenda { get; set; }
 
-        public int Usuario { get; set; }
+        public int UsuarioID { get; set; }
 
         public virtual Usuario _Usuario { get; set; }
+
+        public int Quantidade { get; set; }
     }
 }

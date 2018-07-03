@@ -42,8 +42,9 @@ namespace WpfView
                 produto.CategoriaID = cbCategoria.SelectedIndex + 1;
                 produto.Marca = txtMarca.Text;
                 produto.Modelo = txtModelo.Text;
-                produto.ValorCompra = txtValor.Text;
+                produto.ValorCompra =Convert.ToDouble(txtValor.Text);
                 produto.Quantidade = Convert.ToInt32(txtQuantidadeProduto.Text);
+                produto.Lucro = Convert.ToInt32(txtLucro.Text);
 
                 ProdutosController entradaProduto = new ProdutosController();
                 entradaProduto.Adicionar(produto);

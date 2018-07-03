@@ -39,19 +39,32 @@ namespace WpfView
                 if (produto != null)
                 {
                     txtVendasProduto.Content = produto.Modelo;
-                    txtVendasValor.Content = produto.
+                    var valor = Convert.ToDouble(produto.Lucro);
+                    txtVendasValor.Content = ((valor/100) * produto.ValorCompra) + produto.ValorCompra;
                 }
                 else
                 {
                     txtVendasProduto.Content = "";
+                    txtVendasValor.Content = "";
                 }
             }
             else
             {
                 txtVendasProduto.Content = "";
+                txtVendasValor.Content = "";
             }
             
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ProdutosController venda = new ProdutosController();
+            Produto produto = new Produto();
+
+            produto.Quantidade = Convert.ToInt32(qtdCompra.Text);
+
+            venda.Editar(produto);
         }
     }
 }

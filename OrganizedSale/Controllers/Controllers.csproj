@@ -59,6 +59,34 @@
     <Compile Include="Migrations\201807020100477_CampoQuantidadeProduto.Designer.cs">
       <DependentUpon>201807020100477_CampoQuantidadeProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807022330412_AdicionandoCampoValorVenda.cs" />
+    <Compile Include="Migrations\201807022330412_AdicionandoCampoValorVenda.Designer.cs">
+      <DependentUpon>201807022330412_AdicionandoCampoValorVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807022345378_AlterandoCamposdeValor.cs" />
+    <Compile Include="Migrations\201807022345378_AlterandoCamposdeValor.Designer.cs">
+      <DependentUpon>201807022345378_AlterandoCamposdeValor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807022356511_AlterandoCampoUsuarioIDtblVendas.cs" />
+    <Compile Include="Migrations\201807022356511_AlterandoCampoUsuarioIDtblVendas.Designer.cs">
+      <DependentUpon>201807022356511_AlterandoCampoUsuarioIDtblVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807022357389_AlterandoCampoUsuariotblVendas.cs" />
+    <Compile Include="Migrations\201807022357389_AlterandoCampoUsuariotblVendas.Designer.cs">
+      <DependentUpon>201807022357389_AlterandoCampoUsuariotblVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807030000295_AdicionandoCampoQuantidade.cs" />
+    <Compile Include="Migrations\201807030000295_AdicionandoCampoQuantidade.Designer.cs">
+      <DependentUpon>201807030000295_AdicionandoCampoQuantidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807030003581_AlterandoCampoValorVenda.cs" />
+    <Compile Include="Migrations\201807030003581_AlterandoCampoValorVenda.Designer.cs">
+      <DependentUpon>201807030003581_AlterandoCampoValorVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807030014025_AlterandoCampoPorcentagem.cs" />
+    <Compile Include="Migrations\201807030014025_AlterandoCampoPorcentagem.Designer.cs">
+      <DependentUpon>201807030014025_AlterandoCampoPorcentagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProdutosController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +109,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807020100477_CampoQuantidadeProduto.resx">
       <DependentUpon>201807020100477_CampoQuantidadeProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807022330412_AdicionandoCampoValorVenda.resx">
+      <DependentUpon>201807022330412_AdicionandoCampoValorVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807022345378_AlterandoCamposdeValor.resx">
+      <DependentUpon>201807022345378_AlterandoCamposdeValor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807022356511_AlterandoCampoUsuarioIDtblVendas.resx">
+      <DependentUpon>201807022356511_AlterandoCampoUsuarioIDtblVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807022357389_AlterandoCampoUsuariotblVendas.resx">
+      <DependentUpon>201807022357389_AlterandoCampoUsuariotblVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807030000295_AdicionandoCampoQuantidade.resx">
+      <DependentUpon>201807030000295_AdicionandoCampoQuantidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807030003581_AlterandoCampoValorVenda.resx">
+      <DependentUpon>201807030003581_AlterandoCampoValorVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807030014025_AlterandoCampoPorcentagem.resx">
+      <DependentUpon>201807030014025_AlterandoCampoPorcentagem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
