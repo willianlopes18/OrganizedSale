@@ -71,5 +71,12 @@ namespace WpfView
 
             venda.ShowDialog();
         }
+
+        private void listaProdutos(object sender, RoutedEventArgs e)
+        {
+            Estoque estoque = new Estoque();
+
+            estoque.ShowDialog();
+        }
     }
 }

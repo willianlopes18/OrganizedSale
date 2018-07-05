@@ -78,14 +78,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CadastroCategoria.xaml.cs">
-      <DependentUpon>CadastroCategoria.xaml</DependentUpon>
-    </Compile>
     <Compile Include="CadastroProduto.xaml.cs">
       <DependentUpon>CadastroProduto.xaml</DependentUpon>
     </Compile>
     <Compile Include="CadastroUsuario.xaml.cs">
       <DependentUpon>CadastroUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque.xaml.cs">
+      <DependentUpon>Estoque.xaml</DependentUpon>
     </Compile>
     <Compile Include="TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
@@ -93,11 +93,11 @@
     <Compile Include="Vendas.xaml.cs">
       <DependentUpon>Vendas.xaml</DependentUpon>
     </Compile>
-    <Page Include="CadastroCategoria.xaml">
+    <Page Include="CadastroProduto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CadastroProduto.xaml">
+    <Page Include="Estoque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

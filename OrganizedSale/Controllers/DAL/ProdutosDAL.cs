@@ -28,9 +28,7 @@ namespace Controllers.DAL
                 else
                 {
                     return false;
-                }
-                
-                
+                }                
             }
             catch (System.Exception)
             {
