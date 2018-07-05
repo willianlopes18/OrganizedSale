@@ -14,14 +14,26 @@ namespace Controllers
             produtosDAL.Create(entity);
         }
 
+        public bool NovaVenda(Venda entity)
+        {
+            if (produtosDAL.CreateSell(entity) != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public Produto BuscarPorID(int id)
         {
             return produtosDAL.search(id);
         }
 
-        public void Editar(Produto entity)
+        public bool EditarVenda(Produto entity)
         {
-            throw new System.NotImplementedException();
+            return produtosDAL.edit(entity);
         }
 
         public void Excluir(int id)
@@ -42,6 +54,11 @@ namespace Controllers
         public IList<Categoria> ListarCategorias()
         {
             return produtosDAL.ListCategorias();
+        }
+
+        public void Editar(Produto entity)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

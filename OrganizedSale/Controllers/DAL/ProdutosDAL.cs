@@ -13,13 +13,30 @@ namespace Controllers.DAL
             return contexto.Categorias.ToList();
         }
 
-        public int edit(Produto entity)
+        public bool edit(Produto entity)
         {
-            contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
-            contexto.SaveChanges();
+            var sql = contexto.Produtos.SingleOrDefault(prod => prod.ProdutoID == entity.ProdutoID);
 
-            return entity.ProdutoID;
-            
+            try
+            {
+                if (sql.Quantidade >= entity.Quantidade)
+                {
+                    sql.Quantidade = sql.Quantidade - entity.Quantidade;
+                    contexto.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+                
+                
+            }
+            catch (System.Exception)
+            {
+
+                return false;
+            }                        
         }
 
         public Produto search(int id)
@@ -33,6 +50,14 @@ namespace Controllers.DAL
             contexto.SaveChanges();
 
             return entity.ProdutoID;
+        }
+
+        public int CreateSell(Venda entity)
+        {
+            contexto.Vendas.Add(entity);
+            contexto.SaveChanges();
+
+            return entity.VendaId;
         }
 
         public IList<Produto> ListProdutos()

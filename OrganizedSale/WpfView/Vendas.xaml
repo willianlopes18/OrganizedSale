@@ -13,8 +13,8 @@
         <TextBox x:Name="inputCodigoProduto" HorizontalAlignment="Left" Height="23" Margin="140,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="inputCodigo"/>
         <Label x:Name="txtVendasProduto" Content="Label" HorizontalAlignment="Left" Margin="140,57,0,0" VerticalAlignment="Top"/>
         <Label x:Name="txtVendasValor" Content="Label" HorizontalAlignment="Left" Margin="140,88,0,0" VerticalAlignment="Top"/>
-        <Button Content="Concluir" HorizontalAlignment="Left" Margin="23,187,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Label Content="Quantidade" HorizontalAlignment="Left" Margin="23,119,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="qtdCompra" HorizontalAlignment="Left" Height="23" Margin="140,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="inputCodigo"/>
+        <Button Content="Concluir" HorizontalAlignment="Left" Margin="23,187,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Window>
