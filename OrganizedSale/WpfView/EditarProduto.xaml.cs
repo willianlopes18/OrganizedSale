@@ -27,6 +27,7 @@ namespace WpfView
 
             ProdutosController controller = new ProdutosController();
             inputCodigoProduto.Text = Convert.ToString(id);
+            inputCodigoProduto.IsEnabled = false;
 
             for (int i = 0; i < controller.ListarCategorias().Count; i++)
             {
@@ -46,23 +47,18 @@ namespace WpfView
 
                 if (produto != null)
                 {
-                    cbCategoria.SelectedItem = produto.CategoriaID + 1;
+                    cbCategoria.SelectedIndex = produto.CategoriaID -1;
                     txtMarca.Text = produto.Marca;
                     txtModelo.Text = produto.Modelo;
                     txtQuantidadeProduto.Text = Convert.ToString(produto.Quantidade);
                     txtValor.Text = Convert.ToString(produto.ValorCompra);
+                    txtLucro.Text = Convert.ToString(produto.Lucro);
                 }
                 else
                 {
                     cbCategoria.SelectedItem = "";
                 }
             }
-            else
-            {
-                cbCategoria.SelectedItem = "";
-            }
-
-
         }
 
         private void btnSalvar(object sender, RoutedEventArgs e)

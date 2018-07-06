@@ -90,6 +90,9 @@
     <Compile Include="Estoque.xaml.cs">
       <DependentUpon>Estoque.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListaVendas.xaml.cs">
+      <DependentUpon>ListaVendas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
     </Compile>
@@ -105,6 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Estoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListaVendas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,6 +206,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="605509-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="if_Cart_605508.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="if_Book_605510.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="if_Columns_605505.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

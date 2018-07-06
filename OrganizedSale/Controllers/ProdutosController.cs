@@ -65,5 +65,10 @@ namespace Controllers
         {
             produtosDAL.editProd(entity);
         }
+
+        public IList<Venda> ListaVendas()
+        {
+            return produtosDAL.ListVendas();
+        }
     }
 }

@@ -39,12 +39,6 @@ namespace Controllers.DAL
 
         public void editProd(Produto entity)
         {
-            /*var sql = contexto.Produtos.SingleOrDefault(prod => prod.ProdutoID == entity.ProdutoID);
-            sql.Lucro = entity.Lucro;
-            sql.Marca = entity.Marca;
-            sql.Modelo = entity.Modelo;
-            sql.Quantidade = entity.Quantidade;
-            sql.ValorCompra = entity.ValorCompra;*/
             contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
             contexto.SaveChanges();
         }
@@ -84,6 +78,11 @@ namespace Controllers.DAL
         public IList<Produto> ListProdutos()
         {
             var query = from prod in contexto.Produtos select prod;
+            return query.ToList();
+        }
+        public IList<Venda> ListVendas()
+        {
+            var query = from venda in contexto.Vendas select venda;
             return query.ToList();
         }
     }

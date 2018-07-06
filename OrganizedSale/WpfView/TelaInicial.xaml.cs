@@ -65,18 +65,25 @@ namespace WpfView
             cadastroProduto.ShowDialog();
         }
 
-        private void exibeProdutos(object sender, RoutedEventArgs e)
+        private void novaVenda(object sender, MouseButtonEventArgs e)
         {
             Vendas venda = new Vendas();
 
             venda.ShowDialog();
         }
 
-        private void listaProdutos(object sender, RoutedEventArgs e)
+        private void listaProdutos(object sender, MouseButtonEventArgs e)
         {
             Estoque estoque = new Estoque();
 
             estoque.ShowDialog();
+        }
+
+        private void listaVendas(object sender, MouseButtonEventArgs e)
+        {
+            ListaVendas listaVendas = new ListaVendas();
+
+            listaVendas.ShowDialog();
         }
     }
 }
