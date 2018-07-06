@@ -38,7 +38,12 @@ namespace Controllers
 
         public void Excluir(int id)
         {
-            throw new System.NotImplementedException();
+            Produto prod = produtosDAL.find(id);
+
+            if (prod != null)
+            {
+                produtosDAL.Delete(prod);
+            }
         }
 
         public IList<Produto> ListarPorNome(string nome)
@@ -58,7 +63,7 @@ namespace Controllers
 
         public void Editar(Produto entity)
         {
-            throw new System.NotImplementedException();
+            produtosDAL.editProd(entity);
         }
     }
 }

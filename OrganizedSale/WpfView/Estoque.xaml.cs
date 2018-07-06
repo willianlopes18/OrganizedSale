@@ -28,15 +28,31 @@ namespace WpfView
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            ProdutosController produtosController = new ProdutosController();            
+            dgProdutos.DataContext = produtosController.ListarTodos();
+        }
+
+        private void Excluir(object sender, RoutedEventArgs e)
+        {            
             ProdutosController produtosController = new ProdutosController();
-            dgProdutos.ItemsSource = produtosController.ListarTodos();
+            var prod = dgProdutos.SelectedItem as Produto;
+            produtosController.Excluir(prod.ProdutoID);
+            Window_Loaded(sender, e);   
+        }
+
+        private void EditarProduto(object sender, RoutedEventArgs e)
+        {            
+            var prod = dgProdutos.SelectedItem as Produto;
+            EditarProduto editar = new EditarProduto(prod.ProdutoID);
+            editar.ShowDialog();
+            Window_Loaded(sender, e);
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DataGrid dg = ((DataGrid)sender);
 
-            Produto prod = (Produto)dg.Items[dg.SelectedIndex];
+            Produto prod = (Produto)dg.Items[dg.SelectedIndex];        
         }
     }
 }
